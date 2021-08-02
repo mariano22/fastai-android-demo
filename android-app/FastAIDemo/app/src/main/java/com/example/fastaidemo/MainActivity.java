@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     // Flag for enable/disable running validation when launching the app
-    final boolean RUN_VALIDATION = true;
+    final boolean RUN_VALIDATION = false;
     // Validation percentage of image used (for >10 the process is very time consuming)
     final int RUN_VALIDATION_PCT = 1;
 
