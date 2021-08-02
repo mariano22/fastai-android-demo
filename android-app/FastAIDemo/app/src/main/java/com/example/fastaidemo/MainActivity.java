@@ -172,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
         // - Load the image (pixels as 0 to 255 bytes).
         // - Apply torchvision.transforms.ToTensor, scaleing values from 0 to 1 (dividing by 255).
         // - Apply transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
+        // You don't need the resize because ResNet use AdaptiveAvgPool2d
         bitmap = Bitmap.createScaledBitmap(bitmap, 224, 224, true);
         final Tensor inputTensor = TensorImageUtils.bitmapToFloat32Tensor(bitmap,
                 TensorImageUtils.TORCHVISION_NORM_MEAN_RGB, TensorImageUtils.TORCHVISION_NORM_STD_RGB, MemoryFormat.CHANNELS_LAST);
